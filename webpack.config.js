@@ -1,7 +1,12 @@
+var { resolve } = require('path');
 var VueLoaderPlugin = require('vue-loader/lib/plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/main.js', //webpack打包入口
+  output: {
+    filename: 'bundle.js',
+    path: resolve(__dirname, 'dist')
+  },
   devServer: {
     static: './src/'  // webpack服务器访问入口
   },

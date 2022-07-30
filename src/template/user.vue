@@ -13,15 +13,20 @@
   </div>
 </template>
 <script>
+// state辅助函数
+import { mapState } from "vuex";
 export default {
   name: "login",
   data() {
     return {};
   },
   computed: {
-    content() {
-      return this.$store.state.content;
-    },
+    // content() {
+    //   return this.$store.state.content;
+    // },
+    ...mapState({
+      content: (state) => state.content,
+    }),
   },
   methods: {},
 };

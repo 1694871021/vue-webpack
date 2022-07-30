@@ -5,6 +5,8 @@
   </div>
 </template>
 <script>
+// actons辅助函数
+import { mapActions } from 'vuex'; 
 export default {
   name: "login",
   data() {
@@ -15,12 +17,18 @@ export default {
   watch: {
     count(val) {
       this.$store.dispatch("increment1", val);
+      this.increment1(val)
     },
   },
   mounted() {
-    this.$store.dispatch("increment1", 1);
+    // this.$store.dispatch("increment1", 1);
+    this.increment1(1)
   },
-  methods: {},
+  methods: {
+    ...mapActions([
+      'increment1'
+    ])
+  }
 };
 </script>
 <style scoped>
