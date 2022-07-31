@@ -30,3 +30,8 @@ require（CommonJS）之类的语句，解析推断出来这个文件所依赖�
   npm run dev
 项目打包:
   npm run build
+
+!!! 最后在引入npm包时候一定要注意包的版本，某些包版本不一致就会一直报错，找不到原因
+
+引入vue2 npm i vue@2 vue-loader@15 vue-template-compiler@2
+引入vue3 npm i vue@3 vue-loader@16 vue-template-compiler@3
