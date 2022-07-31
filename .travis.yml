@@ -13,8 +13,11 @@ notifications:
     onsuccess: never
     onfailure: change
 
+install:
+  - npm install
+
 script: 
-  - yarn build
+  - npm run dev
 
 deploy:
   provider: pages
