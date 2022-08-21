@@ -23,6 +23,7 @@ export default {
   mounted() {
     // this.$store.dispatch("increment1", 1);
     this.increment1(1)
+    console.log(this.$router)
   },
   methods: {
     ...mapActions([
